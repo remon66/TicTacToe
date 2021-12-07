@@ -30,15 +30,11 @@ public class Challenge {
 
     public static void getInput() {
         System.out.println("It is Player" + currentPlayer + "'s turn(X - Y):");
+        int radix = 0;
         changePosX = sc.nextInt();
         changePosY = sc.nextInt();
         boolean inBounds = (changePosX >= 0) && (changePosX < grid.length) && (changePosY >= 0) && (changePosY < grid.length);
         if (inBounds) {
-            if (changePosY >= 9 || changePosX >= 9) {
-                System.out.println("Number is too big(less then 2), try again:");
-                getInput();
-            }
-
             if(grid[changePosX][changePosY] == playerO || grid[changePosX][changePosY] == playerX){
                 System.out.println("This cell is already in use. Choose another cell");
                 getInput();
