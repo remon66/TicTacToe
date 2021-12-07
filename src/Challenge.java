@@ -30,7 +30,6 @@ public class Challenge {
 
     public static void getInput() {
         System.out.println("It is Player" + currentPlayer + "'s turn(X - Y):");
-        int radix = 0;
         changePosX = sc.nextInt();
         changePosY = sc.nextInt();
         boolean inBounds = (changePosX >= 0) && (changePosX < grid.length) && (changePosY >= 0) && (changePosY < grid.length);
